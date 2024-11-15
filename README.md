@@ -10,6 +10,9 @@ Thank you for downloading Forge Business! This script is designed to manage busi
 - **Optimized Performance**: Built to ensure low resource consumption and compatibility with modern frameworks.
 - **Translation Support**: Configurable labels and messages for localization.
 
+  ![image](https://github.com/user-attachments/assets/08790474-f665-4414-a30f-1861d9f84857)
+
+
 ## Premium Scripts
 
 We offer a variety of premium scripts to enhance your server. Visit our store for more details:
