@@ -1,0 +1,90 @@
+/* Import the 'Poppins' font from Google Fonts */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#business-ui {
+    display: none;
+    justify-content: center;
+    position: fixed;
+    top: 20px; /* Adjust the vertical position as needed */
+    width: 100%;
+    pointer-events: none; /* Allows interaction with the game */
+    z-index: 1000;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.89);
+    border-radius: 10px;
+    padding: 12px 24px;
+    color: #f1f1f1;
+    font-size: 0.95em;
+    gap: 12px;
+    border: 1px solid #1a1a1a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeInOut 5s ease-in-out forwards;
+    transition: all 0.3s ease;
+    max-width: 80%;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the elements */
+}
+
+.business-label {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #ffffff;
+    text-align: center; /* Center the text */
+}
+
+.business-text {
+    font-size: 1em;
+    font-weight: 400;
+    color: #ff2259;
+    text-align: center; /* Center the text */
+}
+
+#announcement-icon {
+    font-size: 1.5em;
+    color: #ff2259;
+}
+
+#lock-icon {
+    font-size: 1.3em;
+    color: #ff2259;
+    margin-left: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-10px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* Define the animation for the lock icon */
+@keyframes lockBounce {
+    0% { transform: scale(1) rotate(0deg); }
+    20% { transform: scale(1.1) rotate(-15deg); }
+    40% { transform: scale(1) rotate(0deg); }
+    60% { transform: scale(1.1) rotate(15deg); }
+    80% { transform: scale(1) rotate(0deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+/* Class to apply the animation to the lock */
+.lock-animate {
+    animation: lockBounce 1s ease-in-out infinite;
+}
