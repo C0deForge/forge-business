@@ -1,4 +1,4 @@
-/* Import the 'Poppins' font from Google Fonts */
+/* Importar la fuente 'Poppins' desde Google Fonts */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -9,9 +9,9 @@ body {
     display: none;
     justify-content: center;
     position: fixed;
-    top: 20px; /* Adjust the vertical position as needed */
+    top: 20px; /* Ajusta la posición vertical según tu preferencia */
     width: 100%;
-    pointer-events: none; /* Allows interaction with the game */
+    pointer-events: none; /* Permite la interacción con el juego */
     z-index: 1000;
 }
 
@@ -27,7 +27,7 @@ body {
     border: 1px solid #1a1a1a;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     opacity: 0;
-    animation: fadeInOut 5s ease-in-out forwards;
+    animation: fadeIn 0.5s ease-in-out forwards;
     transition: all 0.3s ease;
     max-width: 80%;
 }
@@ -35,21 +35,21 @@ body {
 .text-content {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the elements */
+    align-items: center; /* Centrar los elementos */
 }
 
 .business-label {
     font-weight: 600;
     font-size: 1.1em;
     color: #ffffff;
-    text-align: center; /* Center the text */
+    text-align: center; /* Centrar el texto */
 }
 
 .business-text {
     font-size: 1em;
     font-weight: 400;
     color: #ff2259;
-    text-align: center; /* Center the text */
+    text-align: center; /* Centrar el texto */
 }
 
 #announcement-icon {
@@ -67,14 +67,35 @@ body {
     display: none;
 }
 
-@keyframes fadeInOut {
-    0% { opacity: 0; transform: translateY(-10px); }
-    10% { opacity: 1; transform: translateY(0); }
-    90% { opacity: 1; transform: translateY(0); }
-    100% { opacity: 0; transform: translateY(-10px); }
+/* Separar animaciones de entrada y salida */
+@keyframes fadeIn {
+    0% { 
+        opacity: 0; 
+        transform: translateY(-20px); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
 }
 
-/* Define the animation for the lock icon */
+/* Clase para la animación de salida */
+.fadeOut {
+    animation: fadeOut 0.5s ease-in-out forwards !important;
+}
+
+@keyframes fadeOut {
+    0% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+    100% { 
+        opacity: 0; 
+        transform: translateY(-20px); 
+    }
+}
+
+/* Definir la animación para el ícono del candado */
 @keyframes lockBounce {
     0% { transform: scale(1) rotate(0deg); }
     20% { transform: scale(1.1) rotate(-15deg); }
@@ -84,7 +105,7 @@ body {
     100% { transform: scale(1) rotate(0deg); }
 }
 
-/* Class to apply the animation to the lock */
+/* Clase para aplicar la animación al candado */
 .lock-animate {
     animation: lockBounce 1s ease-in-out infinite;
 }
